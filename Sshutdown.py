@@ -13,3 +13,5 @@ while True:
  inputValue = GPIO.input(6)
  if (inputValue == 1):
    commands.getoutput('sudo /Script/exec/shutdown.sh')
+ else:
+   pass

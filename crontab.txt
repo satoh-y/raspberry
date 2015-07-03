@@ -1,5 +1,5 @@
 ##
-30 7 	* * *	root	/Script/weather/weather.sh /dev/null 2>&1
+30 7 	* * *	root	/Script/exec/weather.sh /dev/null 2>&1
 01 5 	* * *	root	/Script/exec/ntpsync.sh > /dev/null 2>&1
 31 6 	* * *	root	/Script/exec/getsys.sh > /dev/null 2>&1
 ##
