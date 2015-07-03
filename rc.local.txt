@@ -1,0 +1,6 @@
+## Add
+/Script/exec/led_alloff.py &
+/Script/exec/Ccandle.py &
+/Script/exec/Sshutdown.py &
+##
+
