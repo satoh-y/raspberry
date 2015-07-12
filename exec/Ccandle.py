@@ -1,8 +1,8 @@
-#!/usr/bin/env python
+#! /usr/bin/env python
 
 import RPi.GPIO as GPIO
 import time
-
+ 
 GPIO.cleanup()
 
 GPIO.setmode(GPIO.BCM)
@@ -19,16 +19,16 @@ GPIO.setup(22, GPIO.OUT)
 
 while True:
  inputValue = GPIO.input(4)
- if (inputValue == 1):
-   GPIO.output(17, GPIO.HIGH)
-   GPIO.output(27, GPIO.HIGH)
-   GPIO.output(22, GPIO.HIGH)
+ if (inputValue == 1): 
+   GPIO.output(17, GPIO.HIGH) 
+   GPIO.output(27, GPIO.HIGH) 
+   GPIO.output(22, GPIO.HIGH) 
    time.sleep(3)
-   GPIO.output(17, GPIO.LOW)
-   GPIO.output(27, GPIO.LOW)
-   GPIO.output(22, GPIO.LOW)
+   GPIO.output(17, GPIO.LOW) 
+   GPIO.output(27, GPIO.LOW) 
+   GPIO.output(22, GPIO.LOW) 
 else:
-   GPIO.output(17, GPIO.LOW)
-   GPIO.output(27, GPIO.LOW)
+   GPIO.output(17, GPIO.LOW) 
+   GPIO.output(27, GPIO.LOW) 
    GPIO.output(22, GPIO.LOW)
 
