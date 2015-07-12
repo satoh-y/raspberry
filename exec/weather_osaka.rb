@@ -21,7 +21,6 @@ end
 
 def blink
  5400.times do
-### 30.times do
   on
   sleep 0.8
   off
@@ -44,23 +43,6 @@ result = JSON.parse(json)
 telop = result["forecasts"][0]["telop"]
 
 off
-
-###print(telop)
-###print("--->")
-
-##case
-##when telop.include?("雪") then
-##  print("3")
-##when telop.include?("雨") then
-##  print("2")
-##when telop.include?("曇") then
-##  print("1")
-##  blink
-##when "晴" then
-##  print("0")
-##else
-##  puts "bad argument"
-##end
 
 if telop.include?("雪") ||  telop.include?("雨") then
 ####if telop.include?("曇") ||  telop.include?("雨") then
