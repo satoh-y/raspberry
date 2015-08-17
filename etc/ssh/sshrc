@@ -1,0 +1,1 @@
+/usr/local/bin/sshlogin.sh "$USER" "$SSH_CLIENT" "$HOSTNAME"
