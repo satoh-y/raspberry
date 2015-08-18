@@ -5,7 +5,6 @@ TIMER=3
 
 echo "$GPIO" > /sys/class/gpio/export
 echo "in" > /sys/class/gpio/gpio$GPIO/direction
-echo "low" > /sys/class/gpio/gpio$GPIO/direction
 
 cnt=0
 
