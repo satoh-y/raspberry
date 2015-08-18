@@ -1,1 +1,1 @@
-/usr/local/bin/sshlogin.sh "$USER" "$SSH_CLIENT" "$HOSTNAME"
+/usr/local/bin/rb/sshlogin.sh "$SSH_CLIENT" "$USER" "$HOSTNAME"
