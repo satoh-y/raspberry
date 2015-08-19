@@ -9,7 +9,7 @@ require_relative './uri'
 # 今日の日付
 d = Time.now
 
-# 昨日の 00:00:00 ~ 23:59:59 の間のデータを利用して
+# 昨日の 00:00:00- 23:59:59 の間のデータを利用して
 yesterday = Date.new(d.year, d.month, d.day) - 1
 
 start_time = yesterday.to_s + "T00:00:00"
@@ -26,11 +26,11 @@ num = `aws cloudwatch --region us-east-1 get-metric-statistics \
  | jq '.Datapoints[].Maximum'`
 
 
-strings = "昨日までのAWSの利用料金(月毎)になります\n"
+strings = "昨日までのAWSの利用料金(月毎)です\n"
 strings << "```\n"
-strings << "EstimatedCharges : $ #{num}"
+strings << "EstimatedCharges(USD) : $ #{num}"
 strings << "```\n"
-strings << 'ご確認をよろしくお願いいたします'
+strings << 'ご確認をよろしくお願いいたします。'
 
 
 http = Net::HTTP.new($uri.host, $uri.port)
