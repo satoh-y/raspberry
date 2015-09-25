@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>rader</title>
+</head>
+<body>
+<h3>雨雲レーダー</h3>
+
+<p></p>
+	<img id="info"> 
+	<script type="text/javascript">
+
+	function padZero(num) {
+	 var result;
+	  if (num < 10) {
+		result = "0" + num;
+	  } else {
+		result = "" + num;
+	  }
+	  return result;
+	}
+
+	function load() { 
+	 var now = new Date();
+          now.setMinutes(now.getMinutes()-3);
+         //var resYMT = "" + now.getFullYear() + "" + padZero(now.getMonth() + 1) + "" + padZero(now.getDate()) + "" + padZero(now.getHours()) + "" + padZero(now.getMinutes());	       var resYMT = "" + now.getFullYear() + "" + padZero(now.getMonth() + 1) + "" + padZero(now.getDate()) + "" + padZero(now.getHours()) + "" + padZero(Math.floor(now.getMinutes() / 5) *5);
+         //var res = resYMT.substr(0, 11) + "0";
+	  // document.write(resYMT);
+	 var img = document.getElementById("info");
+	 img.src = "http://www.jma.go.jp/jp/radnowc/imgs/radar/211/"+ resYMT +"-00.png";
+	 img.border = 1; 
+	 img.width = 555; 
+	 img.height = 480; 
+	 img.hspace = 10; 
+	 img.vspace = 10; 
+	} 
+	</script> 
+	<button onclick="load()">レーダー画像取得</button>
+ </body>
+</html>
